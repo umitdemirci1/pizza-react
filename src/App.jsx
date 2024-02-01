@@ -5,6 +5,8 @@ import Error from "./pages/error/error";
 import AppLayout from "./layouts/appLayout";
 import Login from "./pages/login/login";
 
+import { loader as menuLoader } from "./pages/home/home";
+
 const router = createBrowserRouter([
   {
     element: <AppLayout />,
@@ -13,6 +15,7 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
+        loader: menuLoader,
       },
       {
         path: "/order",
